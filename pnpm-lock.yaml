@@ -38,9 +38,15 @@ dependencies:
   express:
     specifier: ^4.18.2
     version: 4.19.2
+  ngx-toastr:
+    specifier: ^18.0.0
+    version: 18.0.0(@angular/common@17.3.2)(@angular/core@17.3.2)(@angular/platform-browser@17.3.2)
   rxjs:
     specifier: ~7.8.0
     version: 7.8.1
+  sortablejs:
+    specifier: ^1.15.2
+    version: 1.15.2
   tslib:
     specifier: ^2.3.0
     version: 2.6.2
@@ -67,6 +73,9 @@ devDependencies:
   '@types/node':
     specifier: ^18.18.0
     version: 18.19.28
+  '@types/sortablejs':
+    specifier: ^1.15.8
+    version: 1.15.8
   jasmine-core:
     specifier: ~5.1.0
     version: 5.1.2
@@ -2728,6 +2737,10 @@ packages:
       '@types/node': 18.19.28
     dev: true
 
+  /@types/sortablejs@1.15.8:
+    resolution: {integrity: sha512-b79830lW+RZfwaztgs1aVPgbasJ8e7AXtZYHTELNXZPsERt4ymJdjV4OccDbHQAvHrCcFpbF78jkm0R6h/pZVg==}
+    dev: true
+
   /@types/ws@8.5.10:
     resolution: {integrity: sha512-vmQSUcfalpIq0R9q7uTo2lXs6eGIpt9wtnLdMv9LVpIjCA/+ufZRozlVoVelIYixx1ugCBKDhn89vnsEGOCx9A==}
     dependencies:
@@ -5346,6 +5359,19 @@ packages:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
     dev: true
 
+  /ngx-toastr@18.0.0(@angular/common@17.3.2)(@angular/core@17.3.2)(@angular/platform-browser@17.3.2):
+    resolution: {integrity: sha512-jZ3rOG6kygl8ittY8OltIMSo47P1VStuS01igm3MZXK6InJwHVvxU7wDHI/HGMlXSyNvWncyOuFHnnMEAifsew==}
+    peerDependencies:
+      '@angular/common': '>=16.0.0-0'
+      '@angular/core': '>=16.0.0-0'
+      '@angular/platform-browser': '>=16.0.0-0'
+    dependencies:
+      '@angular/common': 17.3.2(@angular/core@17.3.2)(rxjs@7.8.1)
+      '@angular/core': 17.3.2(rxjs@7.8.1)(zone.js@0.14.4)
+      '@angular/platform-browser': 17.3.2(@angular/animations@17.3.2)(@angular/common@17.3.2)(@angular/core@17.3.2)
+      tslib: 2.6.2
+    dev: false
+
   /nice-napi@1.0.2:
     resolution: {integrity: sha512-px/KnJAJZf5RuBGcfD+Sp2pAKq0ytz8j+1NehvgIGFkvtvFrDM3T8E4x/JJODXK9WZow8RRGrbA9QQ3hs+pDhA==}
     os: ['!win32']
@@ -6444,6 +6470,10 @@ packages:
       ip-address: 9.0.5
       smart-buffer: 4.2.0
     dev: true
+
+  /sortablejs@1.15.2:
+    resolution: {integrity: sha512-FJF5jgdfvoKn1MAKSdGs33bIqLi3LmsgVTliuX6iITj834F+JRQZN90Z93yql8h0K2t0RwDPBmxwlbZfDcxNZA==}
+    dev: false
 
   /source-map-js@1.2.0:
     resolution: {integrity: sha512-itJW8lvSA0TXEphiRoawsCksnlf8SyvmFzIhltqAHluXd88pkCd+cXJVHTDwdCr0IzwptSm035IHQktUu1QUMg==}

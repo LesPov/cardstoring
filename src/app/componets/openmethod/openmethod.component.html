@@ -1,3 +1,98 @@
 <div class="container">
-    
+    <div class="component">
+        <div class="card">
+            <span class="text">Deagablle 1</span>
+        </div>
+        <div class="card">
+            <span class="text">Deagablle 2</span>
+        </div>
+        <div class="card">
+            <span class="text">Deagablle 3</span>
+        </div>
+        <div class="card">
+            <span class="text">Deagablle 4</span>
+        </div>
+        <div class="card">
+            <span class="text">Deagablle 5</span>
+        </div>
+        <div class="card">
+            <span class="text">Deagablle 6</span>
+        </div>
+        <div class="card">
+            <span class="text">Deagablle 7</span>
+        </div>
+        <div class="card">
+            <span class="text">Deagablle 8</span>
+        </div>
+        <div class="card">
+            <span class="text">Deagablle 9</span>
+        </div>
+        <div class="card">
+            <span class="text">Deagablle 10</span>
+        </div>
+        <div class="card">
+            <span class="text">Deagablle 11</span>
+        </div>
+        <div class="card">
+            <span class="text">Deagablle 12</span>
+        </div>
+        <div class="card">
+            <span class="text">Deagablle 13</span>
+        </div>
+        <div class="card">
+            <span class="text">Deagablle 14</span>
+        </div>
+        <div class="card">
+            <span class="text">Deagablle 15</span>
+        </div>
+        <div class="card">
+            <span class="text">Deagablle 16</span>
+        </div>
+        <div class="card">
+            <span class="text">Deagablle 17</span>
+        </div>
+        <div class="card">
+            <span class="text">Deagablle 18</span>
+        </div>
+    </div>
+
+    <div class="wrapper">
+
+        <div class="item">
+
+        </div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="new_item" (click)="addItem()"></div>
+        <button type="button" class="new_itemb" (click)="open()"><i class='bx bx-plus'></i></button>
+
+
+    </div>
+    <div class="sectionmodal">
+        <div class="popup" id="exampleModal" #exampleModal>
+
+            <div class="icon" (click)="close()">
+                <i class='bx bx-x'></i>
+            </div>
+            <div class="modal_container">
+
+                <div class="header">
+                    <h1 class="title ">Agregar nueva categoria</h1>
+                </div>
+                <div class="body_from">
+                    <form>
+                            <label for="name_categoria" class="label">Categoria: </label>
+                            <input type="text" class="control" id="name_categoria">
+
+                    </form>
+                </div>
+                <div class="footer">
+                    <button type="button" class="btn btn-secondary" (click)="close()">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Agregar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
 </div>

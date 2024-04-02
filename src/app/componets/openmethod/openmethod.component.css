@@ -1,0 +1,152 @@
+.container {
+    display: flex;
+}
+
+/* Estilos para el wrapper */
+.component {
+    width: 100%;
+    background: #0b0423;
+    max-width: 350px;
+    padding: 25px;
+    min-height: 100vh;
+    overflow-y: auto;
+    max-height: calc(100vh - 50px);
+    top: 15px;
+}
+
+/* Estilos para el scrollbar */
+.component::-webkit-scrollbar {
+    width: 0;
+}
+
+/* Estilos adicionales para otros navegadores */
+/* Hacemos el scrollbar invisible en Firefox */
+.component {
+    scrollbar-width: none;
+}
+
+/* Estilos para los ítems dentro del wrapper */
+.component .card {
+    background: #304B5F;
+    color: #fff;
+    display: flex;
+    padding: 12px 17px;
+    margin-bottom: 8px;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    padding: 15px;
+    gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    z-index: 1;
+}
+
+/* Estilos para los ítems dentro del wrapper */
+.wrapper .item {
+    height: 200px;
+    background: #304B5F;
+    width: 100%;
+    /* Ajusta el ancho para ocupar toda la columna */
+    border: 2px dashed #fff;
+}
+
+.wrapper .new_item {
+    background: #304B5F;
+    width: 100%;
+    height: 50px;
+    border: 2px dashed #fff;
+    cursor: pointer;
+    /* Esto hace que el cursor sea un puntero */
+}
+
+
+.wrapper .new_itemb {
+    background: #304B5F;
+    width: 100%;
+    height: 50px;
+    border: 2px dashed #fff;
+    outline: none;
+    cursor: pointer;
+    /* Esto hace que el cursor sea un puntero */
+}
+
+
+.wrapper .new_itemb i {
+    color: #fff;
+    font-size: 20px;
+}
+
+.popup {
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 63%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    z-index: 2;
+    display: none;
+}
+
+.popup i {
+    position: absolute;
+    font-size: 30px;
+    right: 10px;
+    top: 5px;
+    cursor: pointer;
+}
+
+.popup .modal_container {
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.popup .modal_container .header {
+    color: #000;
+}
+
+.popup .modal_container .body_from {
+    margin-top: 15px;
+}
+
+.popup .modal_container .footer {
+    display: flex;
+    gap: 20px;
+}
+
+.popup button {
+    width: 150px;
+    margin-top: 20px;
+    padding: 10px 0;
+    background: #6fd649;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.sectionmodal.modal-open {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo oscuro */
+    position: absolute;
+    /* Asegura que z-index funcione */
+    z-index: 999;
+    /* Ajusta el valor según sea necesario */
+    width: 100%;
+    height: 100%;
+}
