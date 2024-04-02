@@ -1,21 +1,23 @@
-import { AfterViewInit, Component, ElementRef, Inject, PLATFORM_ID, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Inject, NgModule, PLATFORM_ID, ViewChild } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import Sortable from 'sortablejs';
 import { ToastrService } from 'ngx-toastr';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-openmethod',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './openmethod.component.html',
   styleUrl: './openmethod.component.css'
 })
 
 export class OpenmethodComponent implements AfterViewInit {
-  @ViewChild('exampleModal', {static: false}) exampleModal?:ElementRef;
 
+  @ViewChild('exampleModal', { static: false }) exampleModal?: ElementRef;
+  username: string = 'Leonarod';
   isModalOpen: boolean = false;
-
+  newCategoryName: string = ''; // Variable para almacenar el nombre de la nueva categoría
   newItemCounter: number = 0; // Inicializar el contador de nuevos ítems
   maxItems: number = 10; // Definir el límite máximo de ítems
 
@@ -71,28 +73,35 @@ export class OpenmethodComponent implements AfterViewInit {
     console.log(`Número total de nuevos ítems: ${this.newItemCounter}`);
 
     this.toastr.success('Se creó una nueva categoría');
+
+    this.close(); // Cierra el modal después de agregar un nuevo elemento
   }
+
   // Método para abrir el modal
   open() {
-    // Marca el modal como abierto
-    this.isModalOpen = true;
+    this.newCategoryName = ''; // Reinicia el campo de entrada del nombre de la categoría
+
     // Cambia el estilo del wrapper agregando una clase
     document.querySelector('.sectionmodal')?.classList.add('modal-open');
-    
+
     // Código para abrir el modal
     (this.exampleModal?.nativeElement as HTMLElement).style.display = 'block';
   }
 
   // Método para cerrar el modal
   close() {
-    // Marca el modal como cerrado
-    this.isModalOpen = false;
+
     // Elimina la clase que agregamos cuando el modal estaba abierto
     document.querySelector('.sectionmodal')?.classList.remove('modal-open');
     // Código para cerrar el modal
     (this.exampleModal?.nativeElement as HTMLElement).style.display = 'none';
   }
-
+  // Método para agregar una nueva categoría
+  addCategory() {
+    // Aquí puedes realizar cualquier validación adicional antes de agregar la categoría
+    console.log('Nueva categoría agregada:', this.newCategoryName);
+    this.close(); // Cierra el modal después de agregar la categoría
+  }
 
 
 }
